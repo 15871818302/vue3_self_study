@@ -1,17 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <hello></hello>
+  <fantasy :user="user"></fantasy>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import hello from "./components/hello.vue";
+import fantasy from "./components/fantasy.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    hello,
+    fantasy,
+  },
+  data() {
+    return {
+      user: "poteto",
+      age: 23,
+      job: "white mage",
+      level: 80,
+    };
+  },
+};
 </script>
 
 <style>
